@@ -1,4 +1,4 @@
-package com.expression.evaluator.pojo;
+package com.expression.evaluator.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,9 +11,9 @@ public interface IExpression {
 
     String toJson() throws JsonProcessingException;
 
-    default Expression fromJson(String json) throws JsonProcessingException {
+    default BaseExpression fromJson(String json) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.readValue(json, Expression.class);
+        return objectMapper.readValue(json, BaseExpression.class);
     }
 
 }
