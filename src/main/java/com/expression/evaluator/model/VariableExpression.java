@@ -1,6 +1,5 @@
 package com.expression.evaluator.model;
 
-import com.expression.evaluator.pojo.Expression;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.Map;
@@ -36,7 +35,7 @@ public class VariableExpression extends BaseExpression {
     }
 
     @Override
-    public Expression fromJson(String json) throws JsonProcessingException {
+    public BaseExpression fromJson(String json) throws JsonProcessingException {
         return super.fromJson(json);
     }
 }
